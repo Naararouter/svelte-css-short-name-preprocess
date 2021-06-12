@@ -27,6 +27,28 @@ module.exports = {
 };
 ```
 
+## Examples
+
+if you have some *.svelte file like the next one:
+```sveltehtml
+<script lang="typescript">
+</script>
+
+<div class="App">
+</div>
+
+<style>
+    .App {
+      background-color: gray;
+    }
+</style>
+```
+
+you will get the next result in a browser: 
+
+<img src="https://user-images.githubusercontent.com/20820069/121783320-92a97e80-cbb6-11eb-96ff-dfa5cfed0209.jpg" width="350" height="300">
+
+
 ## TODO
 - [ ] Provide a way to affect css-framework classnames;
 - [ ] Make more real tests;
