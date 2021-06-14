@@ -110,3 +110,7 @@ you will get the next result in a browser:
 - [ ] Support dynamic svelte class-names;
 - [X] Provide a way to affect css-framework class-names;
 - [ ] Tests;
+
+## Support
+
+If you like this package, you can support me via Patreon: https://www.patreon.com/naararouter
