@@ -1,12 +1,15 @@
 # svelte-css-short-name-preprocess
 
 ## Caveats
-1. This is NOT production-ready package YET, since it wasn't tested enough and it doesn't have some important functionalities.
+1. Use in production at your own risk since there are no another feedbacks yet;
 2. This doesn't affect result svelte-prefixed class-names;
-3. **It shouldn't work with some kind of dynamic class-names**;
 
 ## Motivation
 I didn't find any package for generating short css names for classes in svelte and I decided to make it myself. 
+
+## Requirements
+- Node.js 12+
+- Svelte 3+
 
 ## Installation
 1. `npm i svelte-css-short-name-preprocess --save-dev`
@@ -27,6 +30,9 @@ module.exports = {
 };
 ```
 
+## Rules (section in development)
+(empty yet)
+
 ## API
 
 ### constructor options
@@ -34,7 +40,7 @@ module.exports = {
 |---------|----------|--------|---------|--------------------------------------------------------|
 | srcPath | false    | string | 'src'   | Path to *.svelte sources relative to the project root. |
 
-## Examples
+## Examples (section in development)
 
 ### Simple
 
@@ -107,7 +113,7 @@ you will get the next result in a browser:
 
 ## TODO
 - [ ] Migrate to TypeScript;
-- [ ] Support dynamic svelte class-names;
+- [X] Support dynamic svelte class-names;
 - [X] Provide a way to affect css-framework class-names;
 - [ ] Tests;
 
