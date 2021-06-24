@@ -1,6 +1,6 @@
 {
   "name": "svelte-css-short-name-preprocess",
-  "version": "0.3.0",
+  "version": "0.3.3-rc2",
   "description": "Svelte JS Preprocessor to minify css class names (usually for production mode)",
   "main": "index.js",
   "scripts": {

@@ -35,9 +35,11 @@ class SvelteCssShortNamePreprocess {
   #jsBindClassesMap = {};
   #jsBindVars = {};
   #srcPath = '';
+  #jsBindEnabled = false;
 
   constructor(props = {}) {
     this.#srcPath = props.srcPath || 'src';
+    this.#jsBindEnabled = props.jsBindEnabled || false;
   }
 
   getCssClassesMap() {
@@ -63,7 +65,9 @@ class SvelteCssShortNamePreprocess {
       if (type.startsWith('id')) {
         this.#ids[name] = true;
       } else if (type.startsWith('class:')) {
-        this.#jsBindVars[name] = true;
+        if (this.#jsBindEnabled) {
+          this.#jsBindVars[name] = true;
+        }
       } else if (type.startsWith('class')) {
         if (name.includes(space)) {
           const split = name.split(space);
@@ -222,7 +226,6 @@ class SvelteCssShortNamePreprocess {
     Object.entries(this.#cssClassesMap).forEach(([key, value]) => {
       markupSlice = this.findAndReplaceClassInMarkup(markupSlice, key, value);
     })
-
 
     return [scriptSlice, markupSlice, styleSlice].join('');
   }
